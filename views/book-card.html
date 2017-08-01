@@ -1,0 +1,13 @@
+
+<div class="w3-container">
+
+  <div style="background-color:#E53935;color:white" class="w3-panel w3-card-4">
+    <p>
+      Book Name - {{item.name}}<br />
+      ISBN - {{item.isbn}}<br />
+      Publisher - {{item.publisher}}<br />
+      <a ng-href="#/singleview/{{item.url.slice(34,item.url.length)}}"><button style="float:right" class="btn btn-primary">Click for Details</button></a>
+    </p>
+  </div>
+
+</div>

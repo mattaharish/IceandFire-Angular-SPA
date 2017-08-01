@@ -1,0 +1,95 @@
+
+<div class="w3-container">
+
+  <div style="background-color:#757575;color:white" class="w3-panel w3-card-4">
+    <p>
+
+      House Name - <span ng-if="singleView.singleData.name==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.name!=''">
+        {{singleView.singleData.name}}
+      </span>
+      <br />
+
+      Region - <span ng-if="singleView.singleData.region==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.region!=''">
+      {{singleView.singleData.region}}
+      </span>
+      <br />
+
+      coatOfArms - <span ng-if="singleView.singleData.coatOfArms==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.coatOfArms!=''">
+      {{singleView.singleData.coatOfArms}}
+      </span>
+      <br />
+
+      Words - <span ng-if="singleView.singleData.words==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.words!=''">
+      {{singleView.singleData.words}}
+      </span>
+      <br />
+
+      founded - <span ng-if="singleView.singleData.founded==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.founded!=''">
+      {{singleView.singleData.founded}}
+      </span><br />
+
+      founder - <span ng-if="singleView.singleData.founder==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.founder!=''">
+      {{singleView.singleData.founder}}
+      </span><br />
+
+      DiedOut - <span ng-if="singleView.singleData.diedOut==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.diedOut!=''">
+      {{singleView.singleData.diedOut}}
+      </span><br />
+
+      Titles(s):
+      <span ng-if="singleView.singleData.titles.length==0" style="color:red">Not Given</span>
+      <span ng-repeat="item in singleView.singleData.titles">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br />
+      </span>
+      <br />
+
+      Ancestral Weapons:
+      <span ng-if="singleView.singleData.ancestralWeapons.length==0" style="color:red">Not Given</span>
+      <span ng-repeat="item in singleView.singleData.ancestralWeapons">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br />
+      </span>
+      <br />
+
+      Cadet:
+      <span ng-if="singleView.singleData.cadetBranches.length==0" style="color:red">Not Given</span>
+      <span ng-repeat="item in singleView.cadet track by $index">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br />
+      </span>
+      <br />
+
+      Sworn Members: <br />
+      <span ng-if="singleView.singleData.swornMembers.length==0" style="color:red">Not Given</span>
+      <span ng-repeat="item in singleView.sworn track by $index">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span style="background-color:white;color:black" ng-if='item!=""'>{{item}}</span><br />
+      </span>
+      <br />
+
+      Current Lord - <span ng-if="singleView.singleData.currentLord==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.lordLoad!=''">
+        {{singleView.lordLoaded}}
+      </span>
+
+      <br />
+
+      Overlord - <span ng-if="singleView.singleData.overlord==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.overLordLoad!=''">
+        {{singleView.overLordLoaded}}
+      </span>
+
+      <br />
+
+    </p>
+  </div>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="btn-toolbar">
+  <button class="btn btn-primary" style="background-color:#607D8B" ng-click = "all.changeFilter()">Sort in Reverse Order</button>
+  <button class="btn btn-primary" style="background-color:#607D8B" ng-click = "all.changeFilterCorrect()">Sort in Correct Order</button> <small>Use "sort in correct order" button if Reverse order button is already clicked</small>
+
+  </div>
+
+  <br /><br />
+  <div class="btn-toolbar">
+  <button style="background-color:#1976D2" class="btn btn-primary" ng-click="all.changeBookFilter()">Only Books</button>
+  <button style="background-color:#00BCD4" class="btn btn-primary" ng-click="all.changeHouseFilter()">Only Houses</button>
+  <button style="background-color:#7986CB" class="btn btn-primary" ng-click="all.changeCharacterFilter()">Only characters</button>
+  </div>
+
+
+  <div ng-repeat="item in all.bch | filter:{isbn:all.onlyBooks}|filter:{gender:all.onlyCharacters}|filter:{region:all.onlyHouses}| orderBy:all.filterName">
+    <div ng-if="item.hasOwnProperty('gender')">
+      <character-card></character-card>
+    </div>
+
+    <div ng-if="item.hasOwnProperty('region')">
+      <house-card></house-card>
+    </div>
+
+    <div ng-if="item.hasOwnProperty('isbn')">
+      <book-card></book-card>
+    </div>
+  </div>
+</div>

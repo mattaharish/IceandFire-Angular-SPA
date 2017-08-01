@@ -1,0 +1,18 @@
+
+<div class="w3-container">
+
+  <div  style="background-color:#004D40;color:white" class="w3-panel w3-card">
+  <p>
+    <span ng-if="item.name==''">
+    Character Name - No Name Given
+    </span>
+    <span ng-if="item.name!=''">
+      Character Name - {{item.name}}
+    </span>
+    <br />
+    Gender - {{item.gender}}<br />
+    <a ng-href="#/singleview/{{item.url.slice(34,item.url.length)}}"><button style="float:right" class="btn btn-primary">Click for Details</button></a>
+  </p>
+  </div>
+
+</div>

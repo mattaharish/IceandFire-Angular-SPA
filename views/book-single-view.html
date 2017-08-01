@@ -1,0 +1,29 @@
+
+<div class="w3-container">
+
+  <div style="background-color:#757575;color:white" class="w3-panel w3-card-4">
+    <p>
+      Book Name - {{singleView.singleData.name}}<br />
+      ISBN - {{singleView.singleData.isbn}}<br />
+      Publisher - {{singleView.singleData.publisher}}<br />
+      Author(s):
+      <span ng-repeat="item in singleView.singleData.authors">
+        {{item}}<br />
+      </span>
+      Number of Pages - {{singleView.singleData.numberOfPages}}<br />
+      Country - {{singleView.singleData.country}}<br />
+      Media Type - {{singleView.singleData.mediaType}}<br />
+      Released - {{singleView.singleData.released}}<br /><br />
+      List of characters:<br />
+      <span style="background-color:white;color:black" ng-repeat="item in singleView.charactersArray track by $index">
+        {{item}}<br />
+      </span>
+      <br />
+      POV-Characters:<br /><br />
+      <span style="background-color:white;color:black" ng-repeat="item in singleView.povBooks1 track by $index">
+        {{item}}<br />
+      </span>
+    </p>
+  </div>
+
+</div>

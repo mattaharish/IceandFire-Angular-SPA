@@ -1,0 +1,108 @@
+
+<div class="w3-container">
+
+  <div style="background-color:#757575;color:white" class="w3-panel w3-card-4">
+    <p>
+
+      Character Name - <span ng-if="singleView.singleData.name==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.name!=''">
+        {{singleView.singleData.name}}
+      </span>
+      <br />
+
+      Gender - <span ng-if="singleView.singleData.gender==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.gender!=''">
+      {{singleView.singleData.gender}}
+      </span>
+      <br />
+
+      Culture - <span ng-if="singleView.singleData.culture==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.culture!=''">
+      {{singleView.singleData.culture}}
+      </span>
+      <br />
+
+      born - <span ng-if="singleView.singleData.born==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.born!=''">
+      {{singleView.singleData.born}}
+      </span>
+      <br />
+
+      died - <span ng-if="singleView.singleData.died==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.died!=''">
+      {{singleView.singleData.died}}
+      </span><br />
+
+      Titles(s):
+      <span ng-if="singleView.singleData.titles.length==0" style="color:red">Not Given</span>
+      <span ng-repeat="item in singleView.singleData.titles">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br />
+      </span>
+
+      Alias(es):
+      <span ng-if="singleView.singleData.aliases.length==0" style="color:red">Not Given</span>
+      <span ng-repeat="item in singleView.singleData.aliases">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br />
+      </span>
+
+      father - <span ng-if="singleView.singleData.father==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.father!=''">
+        {{singleView.singleData.father}}
+      </span>
+      <br />
+
+      mother - <span ng-if="singleView.singleData.mother==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.mother!=''">
+        {{singleView.singleData.mother}}
+      </span>
+      <br />
+
+      spouse - <span ng-if="singleView.singleData.spouse==''" style="color:red">Not Given</span>
+      <span ng-if="singleView.singleData.spouse!=''">
+        {{singleView.singleData.spouse}}
+      </span>
+      <br /><br />
+
+      Seasons:<br />
+      <span ng-if="singleView.singleData.tvSeries.length==0" style="color:red">Not Given</span>
+      <span ng-repeat="item in singleView.singleData.tvSeries track by $index">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br />
+      </span>
+      <br />
+
+      Played By:<br />
+      <span ng-if="singleView.singleData.playedBy.length==0" style="color:red">Not Given</span>
+      <span style="color:black" ng-repeat="item in singleView.singleData.playedBy track by $index">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""' style="background-color:white">{{item}}</span><br />
+      </span>
+      <br />
+      List of Allegiances:<br />
+      <span ng-if="singleView.singleData.allegiances.length==0" style="color:red">Not Given</span>
+      <span style="background-color:white;color:black" ng-repeat="item in singleView.allegiancesh track by $index">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br />
+      </span>
+      <br />
+
+      Books:<br />
+      <span ng-if="singleView.singleData.books.length==0" style="color:red">Not Given</span>
+      <span style="background-color:white;color:black" ng-repeat="item in singleView.books track by $index">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br />
+      </span>
+      <br />
+
+      POV-Books:<br />
+      <span ng-if="singleView.singleData.povBooks.length==0" style="color:red">Not Given</span>
+      <span style="background-color:white;color:black" ng-repeat="item in singleView.povs track by $index">
+        <span ng-if='item==""' style="color:yellow">Empty</span>
+        <span ng-if='item!=""'>{{item}}</span><br /><br />
+      </span>
+    </p>
+  </div>
+
+</div>
